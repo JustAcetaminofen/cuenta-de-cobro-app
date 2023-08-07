@@ -158,11 +158,13 @@ const CdcPDFGen = ({ state }) => {
                 <Text
                   style={{
                     minWidth: 130,
+                    maxWidth: 300,
+                    marginRight: 10,
                   }}
                 >
                   {service.name}
                 </Text>
-                <Text> - COP {service.total}</Text>
+                <Text> --- COP {service.total}</Text>
               </li>
             ))}
           </View>
