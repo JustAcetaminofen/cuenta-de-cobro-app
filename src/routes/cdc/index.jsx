@@ -13,6 +13,7 @@ import {
 import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { useState } from "react";
 import getDate from "../../helpers/getDate";
@@ -301,9 +302,13 @@ export const Cdc = () => {
               key={index}
               sx={{
                 display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
                 marginBottom: "20px",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                backgroundColor: "#2e3b55",
+                padding: "10px",
+                borderRadius: "5px",
+                marginTop: "20px",
               }}
             >
               <Typography variant="subtitle2">
@@ -318,7 +323,14 @@ export const Cdc = () => {
               <Typography variant="subtitle2">
                 Total: {service.total}
               </Typography>
-              <IconButton onClick={() => deleteService(service.id)}>
+              <IconButton
+                onClick={() => deleteService(service.id)}
+                style={{
+                  color: "#b93838",
+                  backgroundColor: "#2e3b55",
+                  marginLeft: "auto",
+                }}
+              >
                 <DeleteIcon />
               </IconButton>
             </ListItem>
@@ -342,12 +354,13 @@ export const Cdc = () => {
               style={{
                 color: "white",
                 fontWeight: "700",
+                marginRight: "10px",
               }}
             >
-              Descargar PDF
+              Generar PDF
             </span>
             <span>
-              <FileDownloadIcon />
+              <PictureAsPdfIcon />
             </span>
           </Link>
         </List>
