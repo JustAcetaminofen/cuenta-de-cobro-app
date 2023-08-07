@@ -323,7 +323,21 @@ export const Cdc = () => {
               </IconButton>
             </ListItem>
           ))}
-          <Link key={formData.id} to={formData.id} state={formData}>
+          <Link
+            key={formData.id}
+            to={formData.id}
+            state={formData}
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#2E3B55",
+              padding: "10px",
+              borderRadius: "5px",
+              marginBottom: "20px",
+            }}
+          >
             <span
               style={{
                 color: "white",
