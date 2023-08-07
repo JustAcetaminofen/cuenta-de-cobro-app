@@ -289,7 +289,13 @@ export const Cdc = () => {
             onChange={(e) => setQuantity(e.target.value)}
           />
         </Box>
-        <Button variant="contained" onClick={() => addService()}>
+        <Button
+          variant="contained"
+          onClick={() => addService()}
+          style={{
+            marginBottom: "20px",
+          }}
+        >
           <span style={{ color: "white", fontWeight: "700" }}>
             Agregar servicio
           </span>
